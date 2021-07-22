@@ -1,0 +1,15 @@
+
+*{ 
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Manrope', sans-serif;
+}
+
+
+@import "./variables";
+@import "./header";
+
+.hide{
+    display: none;
+}
