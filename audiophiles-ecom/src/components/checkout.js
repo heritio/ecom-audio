@@ -25,15 +25,15 @@ function Ourinput(props) {
   );
 }
 function PaymentCheckbox(props) {
-  return <div className="checkout__payment-choices">
+  return <div className="checkout__payment">
          <p className="checkout__payment-choices-title">Payment Method</p>
          <div className="checkout__payment-choices-container">
              <div className="checkout__payment-choices-elem">
+               
                 <input className="checkout__payment-choices-elem-box" type="radio" name="payment" value="e-money" id="e-money"/>
                 <label htmlFor="e-money">e-Money</label>
              </div>  
              <div className="checkout__payment-choices-elem">
-                
                 <input className="checkout__payment-choices-elem-box" type="radio" name="payment" value="cashondelivery" id="cashondelivery"/>
                 <label htmlFor="cashondelivery">Cash On Delivery</label>
              </div>
@@ -104,6 +104,18 @@ export default function Checkout() {
           <div className="checkout__form-billing-detail">
             <h3 className="checkout__form-section">Payment Details</h3>
             <PaymentCheckbox />
+            <div className="checkout__form-section-pair">
+              <Ourinput
+                inputRef={"emoneynumber"}
+                inputType={"text"}
+                inputName={"e-Money Number"}
+              />
+              <Ourinput
+                inputRef={"emoneypin"}
+                inputType={"text"}
+                inputName={"e-Money PIN"}
+              />
+            </div>
           </div>
         </div>
         <div className="checkout__summary"></div>
