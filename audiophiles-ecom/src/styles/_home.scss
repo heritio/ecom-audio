@@ -1,0 +1,353 @@
+
+
+.home{
+    max-width: 100%;
+    &__banner{
+         max-width: 100%;
+         height: 550px;
+         background: url("../assets/home/desktop/image-hero.jpg"),;
+         background-size: cover;
+         background-repeat: no-repeat;
+         background-position: center;
+        
+        @media only screen and (max-width: 800px){
+            background: url("../assets/home/tablet/image-header.jpg"),;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        @media only screen and (max-width: 425px){
+            background: url("../assets/home/mobile/image-header.jpg"),;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: top;
+        }
+        
+         
+    }
+    &__banner-cta{
+       width: 400px;
+       height: 350px;
+       max-width: 100%;
+       color: var(--dark-gray);
+       margin: auto;
+       text-align: center;
+       @media only screen and (min-width: 800px){
+        text-align: start;
+        margin: 0 auto 0 100px;
+      }
+    }
+    &__banner-cta-uppertitle{
+        padding-top: 100px;
+    }
+    &__banner-cta-title{
+       font-size: 36px;
+       color: var(--medium-light-gray);
+       @media only screen and (min-width: 600px){
+        font-size: 65px;
+       }
+    }
+    &__banner-cta-undertext{
+       font-size: 15px;
+       width: 70%;
+       margin: 0 auto;
+       padding-top: 14px;
+       padding-bottom: 10px;
+        @media only screen and (min-width: 600px){
+            
+            width: 100%;
+           }
+    }
+    &__banner-cta-btn{
+        height: 48px;
+        width: 160px;
+        margin-top: 20px;
+        color: var(--medium-light-gray);
+        background-color: var(--dark-beige);
+        cursor: pointer;
+        border: none;
+        text-transform: uppercase;
+        &:active,:hover{
+            background-color: var(--light-beige);
+        }
+    }
+
+    &__categori{
+        list-style: none;
+        max-width: 100%;
+        height: fit-content;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        padding: 70px 20px;
+          @media only screen and (max-width: 400px) {
+              max-width: 100%;
+              flex-direction: column;
+              justify-content: flex-start;
+              align-items: center;
+          } 
+          @media only screen and (min-width: 400px) {
+              padding-bottom: 20px;
+          } 
+    }
+    &__category-link{
+        width: 350px;
+        max-width: 100%;
+        height: 135px;
+        display: flex;
+        flex-direction: column;
+        justify-content:flex-end;
+        align-items: center;
+        color: var(--black-color);
+        padding-bottom: 10px;
+       position: relative;
+       background: var(--medium-light-gray);
+       border-radius: 10px;
+       cursor: pointer;
+       @media only screen and (min-width: 400px) {
+           margin: 70px 15px 0 15px;
+        } 
+       @media only screen and (max-width: 400px) {
+         
+          margin: 70px auto 0 auto;
+       } 
+       a{
+        text-decoration: none;
+        color: var(--black-color);
+       }
+    }
+    &__categori-item{
+
+    }
+    &__category-img{
+        width: 80px;
+        height: 80px; 
+        height: auto;
+        position: absolute;
+        top: -35px;
+        left: 50%;
+        transform: translateX(-50%);
+        
+    }
+    &__category-text{
+        font-size: 13px;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin: 0 auto 15px auto;
+    }
+    &__category-shop{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-transform: uppercase;
+        font-size: 13px;
+        
+         .fas{
+            color: var(--dark-beige);
+            font-size: 13px;
+            margin-left: 4px;
+         } 
+    }
+
+    &__zx9-hero{
+        position: relative;
+        z-index: 3;
+        border-radius: 5px;
+        margin: 50px auto 0 auto;
+        width: 90%;
+        background:   var(--dark-beige);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        overflow: hidden;
+        color: var(--medium-light-gray);
+        padding: 0 0 40px 0;
+        @media only screen and (min-width: 780px) {
+          flex-direction: row;
+          height: 560px;
+          padding: 15px 20px 0 50px;
+          z-index: 10;
+        } 
+    }
+    &__zx9-hero-img{
+       height: 207px;
+       width: 172px;
+       margin: 50px auto 20px auto;
+       position: relative;
+       z-index: 2;
+       @media only screen and (min-width: 780px) {
+        width: 413px;
+        height: 500px;
+        transform: translateY(50px);
+    } 
+       
+    }
+    &__zx9-hero-text{
+        
+        @media only screen and (min-width: 780px) {
+            text-align: start;
+            width: 40%;
+            margin-right: 10px;
+            margin-left: 20px;
+        } 
+    }
+    &__zx9-hero-title{
+       width: 40%;
+       margin: 0 auto 15px auto;
+       text-transform: uppercase;
+       line-height: 1.1;
+       @media only screen and (min-width: 780px) {
+        text-align: start;
+        width: 100%;
+        
+    } 
+       
+    }
+    &__zx9-hero-info{
+        line-height: 1.6;
+        width: 60%;
+        margin: auto;
+        @media only screen and (min-width: 780px) {
+            width: 70%;
+            margin: 15px 0 25px 0; 
+        } 
+    }
+    &__zx9-hero-cta{
+        position: relative;
+       margin: 20px;
+       height: 50px;
+       width: 165px;
+       color: var(--medium-light-gray);
+       background-color: var(--black-color);
+       border: none;
+       cursor: pointer;
+       z-index: 10;
+       text-transform: uppercase;
+       &:hover,&:active{
+          background-color: var(--very-dark-gray); 
+       }
+       @media only screen and (min-width: 780px) {
+        margin: 20px 0;
+      } 
+    }
+    &__zx9-hero-circles{
+       position: absolute;
+       width: 560px;
+       top: -130px;
+       z-index: 1;
+       @media only screen and (min-width: 780px) {
+        width: 900px;
+        top: -20px;
+        left: -7rem;
+      } 
+    }
+    &__zx7-hero{
+        width: 90%;
+        height: 320px;
+        margin: 30px auto;
+        background: url("../assets/home/mobile/image-speaker-zx7.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        border-radius: 5px;
+        @media only screen and (min-width: 480px) {
+            background: url("../assets/home/tablet/image-speaker-zx7.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        } 
+
+        @media only screen and (min-width: 780px) {
+            background: url("../assets/home/desktop/image-speaker-zx7.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        } 
+    }
+    &__zx7-hero-title{
+       margin: -20px 0 0 50px;
+      
+       text-transform: uppercase;
+    }
+    &__zx7-hero-cta{
+        margin: 20px 0 0 50px;
+        height: 50px;
+        width: 165px;
+        background: transparent;
+        border: 1px solid black;
+        text-transform: uppercase;
+        &:active{
+            color: white;
+            background: var(--black-color);
+        }
+    }
+    
+    &__yx1-hero{
+        display: flex;
+        flex-direction: column;
+  
+        @media only screen and (min-width: 780px) {
+            flex-direction: row;
+            width: 90%;
+            margin: 0 auto;
+        } 
+    }
+
+    &__yx1-hero-img{
+        height: 40vh;
+        width: 90%;
+        margin: 10px auto 10px auto;
+        border-radius: 5px;
+        background: url("../assets/home/mobile/image-earphones-yx1.jpg");
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        background-position: top center;
+        @media only screen and (min-width: 780px) {
+            margin: 0;
+           margin-right: 5px;
+           height: 37.5vh;
+        } 
+       
+    }
+
+    &__yx1-hero-cta{
+        border-radius: 5px;
+        background: var(--medium-light-gray);
+        height: 40vh;
+        width: 90%;
+        margin: 5px auto 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        @media only screen and (min-width: 780px) {
+            margin: 0;
+           margin-left: 5px;
+           height: 37.5vh;
+        } 
+    }
+    &__yx1-hero-title{
+        margin: -30px 0 0 50px;
+        text-transform: uppercase;
+        max-width: 100%;
+    }
+    &__yx1-hero-cta-btn{
+        margin: 20px 0 0 50px;
+        height: 50px;
+        width: 165px;
+        background: transparent;
+        border: 1px solid black;
+        text-transform: uppercase;
+        &:active{
+            color: white;
+            background: var(--black-color);
+        }
+    }
+}

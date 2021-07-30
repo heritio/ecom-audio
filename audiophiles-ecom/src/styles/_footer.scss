@@ -1,0 +1,96 @@
+
+
+.footer{
+    background: var(--black-color);
+    color: var(--white-color);
+    text-align: center;
+    position: relative;
+    &::after{
+        content: "";
+        position: absolute;
+        width: 100px;
+
+        border-top: 5px solid var(--dark-beige);
+        top: 0;
+        left: 10%;
+        @media only screen and (max-width: 495px) {
+           
+            left: 50%;
+            margin: 0 auto;
+            width: 50px;
+            transform: translateX(-50%);
+        } 
+    } 
+
+    &__links{
+      width: 80%;
+      margin: 20px auto;
+      
+    }
+    &__img{
+        margin: 50px auto 0 auto;
+        @media only screen and (max-width: 495px) {
+            width: min-content; 
+            height: 30px;
+            margin: 50px auto 0 auto;
+
+           } 
+    }
+    &__link-items{
+       list-style: none;
+       margin: 50px auto 0 auto;
+       display: flex;
+       flex-direction: column-reverse;
+       justify-content: center;
+       align-items: center;
+       text-transform: uppercase;
+       li{
+           margin: 10px auto;
+       }
+       
+       @media only screen and (min-width: 500px) {
+        
+        flex-direction: row;
+        justify-content: start;
+        margin: 10px auto 0 auto;
+        li{
+            margin: 0 auto;
+        }
+       } 
+    }
+    &__info{
+        width: 80%;
+      margin: 0 auto;
+      color: var(--very-dark-gray);
+    }
+    &__disclaimer-social{
+        width: 80%;
+      margin: 20px auto 0 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      color: var(--very-dark-gray);
+      @media only screen and (min-width: 500px) {
+        
+        flex-direction: row;
+       } 
+    }
+    &__socials{
+       display: flex;
+       flex-direction: row;
+       justify-content: center;
+       align-items: center;
+       list-style: none;
+       color: var(--lighter-gray);
+       li{
+           margin: 10px;
+           font-size: 30px;
+       }
+       
+    }
+
+      @media only screen and (min-width: 400px) {
+        text-align: start;
+      } 
+}

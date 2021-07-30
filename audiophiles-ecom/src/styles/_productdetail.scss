@@ -1,0 +1,275 @@
+
+
+.product-detail{
+   width: 90%;
+   max-width: 100%;
+   margin: 0 auto;
+   overflow-x: hidden;
+    &__category{
+        border: none;
+        color: var(--very-dark-gray);
+        background-color: transparent;
+        font-size: 20px;
+        max-width: 100%;
+        margin: 40px 0;
+    }
+    &__product{
+       max-width: 100%;
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: flex-start;
+       @media only screen and (min-width: 480px) {
+        flex-direction: row;
+        
+       }  
+       @media only screen and (min-width: 780px) {
+       flex-direction: row;
+     
+       }
+       
+    }
+    &__picture{
+       flex-basis: 1;
+       max-width: 100%;
+       height: auto;
+       max-height: 100%;
+       @media only screen and (min-width: 480px) {
+        max-width: 281px;
+        max-height: 480px;
+       } 
+       @media only screen and (min-width: 780px) {
+        max-width: 540px;
+        max-height: 560px;
+       } 
+       
+    }
+    &__info{
+        flex-basis: 1;
+        max-width: 90%;
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        
+        @media only screen and (min-width: 480px) {
+            margin: 0 0 0 30px;
+           
+        } 
+        @media only screen and (min-width: 780px) {
+            margin: 0 0 0 90px;
+            
+        } 
+    }
+    &__name{
+        margin: 10px 0 0 0;
+        width: 20%;
+        max-width: 100%;
+        @media only screen and (min-width: 480px) {
+            width: 200px;
+            font-size: 40px;
+        } 
+    }
+    &__description{
+        margin: 10px 0 0 0;
+        width: 90%;
+        max-width: 100%;
+        @media only screen and (min-width: 480px) {
+            width: 100%;
+            font-size: 15px;
+            color: var(--very-dark-gray);
+        } 
+    }
+    &__price{
+        margin: 10px 0 0 0;
+        width: 90%;
+        max-width: 100%;
+        @media only screen and (min-width: 480px) {
+            width: 100%;
+            font-size: 17px;
+            
+        } 
+    }
+    &__add-to-cart{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        max-width: 100%;
+        margin-top: 30px;
+        @media only screen and (max-width: 300px) {
+           flex-direction: column;
+           align-items: center;
+        } 
+    }
+    &__add-to-cart-amount{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    &__add-to-cart-cta{
+        max-height: fit-content;
+       
+        margin-left: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__add-to-cart-btn{
+        height: 48px;
+        width: 160px;
+      
+        color: var(--medium-light-gray);
+        background-color: var(--dark-beige);
+        cursor: pointer;
+        border: none;
+        text-transform: uppercase;
+        &:hover{
+            background-color: var(--light-beige);
+        }
+    }
+    &__add-to-cart-amount-sign{
+        height: 48px;
+        width: 48px;
+        border: none;
+        font-size: 25px;
+        &:hover{
+            background-color: var(--dark-gray);
+            cursor: pointer;
+        }
+    }
+    &__add-to-cart-amount-number{
+        height: 48px;
+        width: 48px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--medium-light-gray);
+    }
+    &__features{
+        width: 90%;
+        max-width: 90%;
+        display: flex;
+        flex-direction: column;
+        margin: 50px 0 0 0;
+        @media only screen and (min-width: 780px) {
+            flex-direction: row;
+            justify-content: space-evenly;
+        } 
+    }
+    &__features-text{
+        @media only screen and (min-width: 780px) {
+            flex-basis: 1;
+            width: 100%;
+        } 
+         
+    }
+    &__features-text-info{
+        
+        font-size: 15px;
+        color: var(--very-dark-gray);
+        overflow-wrap: break-word;
+        line-height: 1.9;
+    }
+    &__features-text-title{
+       margin: 30px 0;
+       text-transform: uppercase;
+    }
+    &__in-the-box{
+       display: flex;
+       flex-direction: column;
+
+       @media only screen and (max-width: 780px) and (min-width: 430px)  {
+            flex-direction: row;
+            justify-content: space-between;
+            
+       }
+       @media only screen and (min-width: 780px) {
+        flex-basis: 1;
+        width: 60%;
+        padding-left: 90px;
+       } 
+    }
+    &__in-the-box-title{
+       margin: 30px 0;
+       text-transform: uppercase;
+
+    }
+    &__in-the-box-items{
+      list-style: none;
+      @media only screen and (max-width: 780px) and (min-width: 430px)  {
+        margin-top: 28px;
+      }
+    }
+    &__in-the-box-item{
+
+    }
+    &__in-the-box-item-count{
+       font-size: 14px;
+       color: var(--dark-beige);
+       margin-right: 15px;
+    }
+    &__in-the-box-item-name{
+        font-size: 14px;
+    }
+    &__gallery{
+      width: 90%;
+      max-width: 100%;
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 30px auto 0 auto;
+      @media only screen and (min-width: 480px) {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        
+       } 
+       @media only screen and (min-width: 780px) {
+        transform: scale(1.4);
+        margin: 150px auto;
+       } 
+    }
+    &__gallery-pair-container{
+      flex-basis: 1;
+      display: flex;
+      flex-direction: column;
+      
+    }
+    &__gallery-pair-img-1{
+        max-width: 100%;
+        margin: 5px 0;
+        border-radius: 5px;
+        @media only screen and (min-width: 480px) {
+            height: 174px;
+            width: 100%;
+            min-width: 277px;
+            margin: 0 10px 10px 0;
+        } 
+    }
+    &__gallery-pair-img-2{
+        max-width: 100%;
+        margin: 5px 0;
+        border-radius: 5px;
+        @media only screen and (min-width: 480px) {
+            height: 174px;
+            width: 100%;
+            min-width: 277px;
+            margin: 10px 10px 0 0;
+        } 
+    }
+    &__gallery-single-img{
+        flex-basis: 1;
+        
+        max-width: 100%;
+        margin: 5px 0;
+        border-radius: 5px;
+
+        @media only screen and (min-width: 480px) {
+            height: 368px;
+            width: 395px;
+            margin: 0 0 0 10px;
+        } 
+    }
+}
