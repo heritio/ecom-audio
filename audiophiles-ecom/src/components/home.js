@@ -10,10 +10,10 @@ import HomeZx9hero from "./home-zx9hero";
 import HomeZx7hero from "./home-zx7hero";
 import HomeYx1hero from "./home-yx1hero";
 
-export default function Home() {
+export default function Home(props) {
   return (
     <div className="home">
-      <HomeBanner />
+      <HomeBanner ourData={props.data} />
       <ul className="home__categori">
         <li className="home__category-link">
           <Link to="/headphones">          
@@ -44,9 +44,9 @@ export default function Home() {
             </Link>
         </li>
       </ul>
-      <HomeZx9hero ourImg={speakersHero} />
-      <HomeZx7hero />
-      <HomeYx1hero />
+      <HomeZx9hero ourImg={speakersHero} ourData={props.data} />
+      <HomeZx7hero ourData={props.data}/>
+      <HomeYx1hero ourData={props.data}/>
     </div>
   );
 }

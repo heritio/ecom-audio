@@ -7,7 +7,7 @@ import Cart from "./cart";
 import speakersHero from "../assets/speakersmenu.svg";
 import headphonesHero from "../assets/headphones.svg";
 import earphonesHero from "../assets/earphonessvg.svg";
-export default function Header() {
+export default function Header({cart, incrementProduct, deleteProduct,clearCart, ourTotalPrice}) {
   function toggleMenu() {
     let mobMenu = document.querySelector(".header__nav-mobile-links");
     let ourCart = document.querySelector(".cart-container");
@@ -111,7 +111,7 @@ export default function Header() {
           fill-rule="nonzero"
         />
       </svg>
-      <Cart />
+      <Cart cart={cart} incrementProduct={incrementProduct} deleteProduct={deleteProduct} clearCart={clearCart} ourTotalPrice={ourTotalPrice}/>
     </header>
   );
 }

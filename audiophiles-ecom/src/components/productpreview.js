@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import test from "../assets/headphones.svg";
 export default function Productpreview(props) {
-  console.log(props.directionByKey);
+  
   return (
     <div className={"product-preview " + props.directionByKey}>
       <div className="product-preview__img-container">
