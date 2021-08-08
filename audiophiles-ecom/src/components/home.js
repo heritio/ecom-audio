@@ -16,7 +16,7 @@ export default function Home(props) {
       <HomeBanner ourData={props.data} />
       <ul className="home__categori">
         <li className="home__category-link">
-          <Link to="/headphones">          
+          <Link  to="/headphones">          
             <HomeCategory
                 className="home__categori-item"
                 menuName={"Headphones"}
@@ -26,7 +26,7 @@ export default function Home(props) {
 
         </li>
         <li className="home__category-link">
-            <Link to="/speakers">          
+            <Link  to="/speakers">          
                     <HomeCategory
                     className="home__categori-item"
                     menuName={"Speakers"}
@@ -35,7 +35,7 @@ export default function Home(props) {
             </Link>
         </li>
         <li className="home__category-link">
-            <Link to="/earphones">
+            <Link  to="/earphones">
                     <HomeCategory
                     className="home__categori-item"
                     menuName={"Earphones"}

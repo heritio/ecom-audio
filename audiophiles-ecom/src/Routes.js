@@ -110,7 +110,7 @@ export default function Routes() {
           <Home  data={ourData} />
         </Route>
         <Route exact path="/checkout"  >
-          <Checkout  />
+          <Checkout clearCart={clearCart} />
         </Route>
         <Route
           exact

@@ -47,7 +47,11 @@
        li{
            margin: 10px auto;
        }
-       
+       a{
+         text-decoration: none;
+         color: white;
+         cursor: pointer;
+       }
        @media only screen and (min-width: 500px) {
         
         flex-direction: row;

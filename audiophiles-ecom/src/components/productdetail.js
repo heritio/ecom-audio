@@ -1,15 +1,20 @@
-import React, { useState } from "react";
-import { useLocation, useHistory } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { useLocation, useHistory, Link, useParams } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
+
+
+
 export default function Productdetail({
   addCartItem,
   amount,
   setAmount,
   setProduct,
+  data
 }) {
   const history = useHistory();
   const location = useLocation();
   const { ourProps } = location.state;
+  
   const isDesktopOrLaptop = useMediaQuery({
     query: "(min-width: 950px)",
   });
@@ -20,13 +25,16 @@ export default function Productdetail({
     let ourCart = document.querySelector(".cart-container");
     ourCart.classList.remove("hide");
   }
+
   let ourProduct = ourProps;
-  console.log("ourProps", ourProps);
+
+  console.log("ourProduct", ourProduct);
+  console.log("data", data);
   return (
     <div className="product-detail">
       <p
         className="product-detail__category"
-        onClick={() => history.push(`/${ourProps.category}`)}
+        onClick={() => history.goBack()}
       >
         Go Back
       </p>
@@ -35,20 +43,20 @@ export default function Productdetail({
           className="product-detail__picture"
           src={
             isMobile
-              ? "." + ourProps.image.mobile
+              ? "." + ourProduct.image.mobile
               : isTablet
-              ? "." + ourProps.image.tablet
-              : "." + ourProps.image.desktop
+              ? "." + ourProduct.image.tablet
+              : "." + ourProduct.image.desktop
           }
           alt=""
         />
         <div className="product-detail__info">
-          {ourProps.new === true ? (
+          {ourProduct.new === true ? (
             <p className="product-preview__new-labe">New product</p>
           ) : null}
-          <h2 className="product-detail__name">{ourProps.name}</h2>
-          <p className="product-detail__description">{ourProps.description}</p>
-          <h3 className="product-detail__price">$ {ourProps.price}</h3>
+          <h2 className="product-detail__name">{ourProduct.name}</h2>
+          <p className="product-detail__description">{ourProduct.description}</p>
+          <h3 className="product-detail__price">$ {ourProduct.price}</h3>
           <div className="product-detail__add-to-cart">
             <div className="product-detail__add-to-cart-amount">
               <button
@@ -85,13 +93,13 @@ export default function Productdetail({
         <div className="product-detail__features-text">
           <h3 className="product-detail__features-text-title">Features</h3>
           <p className="product-detail__features-text-info">
-            {ourProps.features}
+            {ourProduct.features}
           </p>
         </div>
         <div className="product-detail__in-the-box">
           <h3 className="product-detail__in-the-box-title">In the box</h3>
           <ul className="product-detail__in-the-box-items">
-            {ourProps.includes.map((item) => {
+            {ourProduct.includes.map((item) => {
               return (
                 <li className="product-detail__in-the-box-item">
                   <span className="product-detail__in-the-box-item-count">
@@ -112,37 +120,46 @@ export default function Productdetail({
             className="product-detail__gallery-pair-img-1"
             src={
               isMobile
-                ? "." + ourProps.gallery.first.mobile
+                ? "." + ourProduct.gallery.first.mobile
                 : isTablet
-                ? "." + ourProps.gallery.first.tablet
-                : "." + ourProps.gallery.first.desktop
+                ? "." + ourProduct.gallery.first.tablet
+                : "." + ourProduct.gallery.first.desktop
             }
-            alt={ourProps.name + "gallery item 1"}
+            alt={ourProduct.name + "gallery item 1"}
           />
           <img
             className="product-detail__gallery-pair-img-2"
             src={
               isMobile
-                ? "." + ourProps.gallery.second.mobile
+                ? "." + ourProduct.gallery.second.mobile
                 : isTablet
-                ? "." + ourProps.gallery.second.tablet
-                : "." + ourProps.gallery.second.desktop
+                ? "." + ourProduct.gallery.second.tablet
+                : "." + ourProduct.gallery.second.desktop
             }
-            alt={ourProps.name + "gallery item 2"}
+            alt={ourProduct.name + "gallery item 2"}
           />
         </div>
         <img
           className="product-detail__gallery-single-img"
           src={
             isMobile
-              ? "." + ourProps.gallery.third.mobile
+              ? "." + ourProduct.gallery.third.mobile
               : isTablet
-              ? "." + ourProps.gallery.third.tablet
-              : "." + ourProps.gallery.third.desktop
+              ? "." + ourProduct.gallery.third.tablet
+              : "." + ourProduct.gallery.third.desktop
           }
-          alt={ourProps.name + "gallery item 3"}
+          alt={ourProduct.name + "gallery item 3"}
         />
       </div>
+      <h2 className="product-detail__others-stack-title">YOU MAY ALSO LIKE</h2>
+      <div  className="product-detail__others-stack">
+         
+              
+
+      
+      </div>
+
+      
     </div>
   );
 }

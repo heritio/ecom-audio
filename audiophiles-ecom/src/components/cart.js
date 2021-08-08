@@ -1,6 +1,9 @@
 import React, {useState,useEffect} from 'react'
 import { Link } from "react-router-dom";
 import Cartitem from './cartitem';
+
+
+
 export default function Cart(props) {
    
     function hideCart(){
@@ -30,7 +33,7 @@ export default function Cart(props) {
                 <h4>Total</h4>
                 <h5>$ {props.ourTotalPrice !== undefined ? props.ourTotalPrice : 0}</h5>
             </div>
-            <Link to={{pathname: "/checkout", 
+            <Link to={{pathname: props.cart.length > 0 ? "/checkout" : "/", 
               state: {
                 ourCart: props.cart,
                 ourTotal: props.ourTotalPrice

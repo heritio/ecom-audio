@@ -10,6 +10,7 @@
     &__back-btn{
       text-transform: uppercase;
       color: var(--very-dark-gray);
+      cursor: pointer;
     }
     &__containter{
         box-shadow:0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
@@ -83,7 +84,7 @@
     }
     &__input{
         width: 90%;
-        height: 81px;
+        height: fit-content;
         margin: 50px 20px 0 0 ;
         max-width: 100%;
         
@@ -145,10 +146,10 @@
         display: flex;
         flex-direction: column;
         margin: 50px 0 0 0 ;
-        
+        max-width: 92%;
         @media only screen and (min-width: 600px) {
             flex-direction: row;
-            max-width: 95%;
+            
             justify-content: space-between;
             margin: 50px auto 0 auto;
             align-items: flex-start;
@@ -263,7 +264,8 @@
     }
     &__modal{
         position: absolute;
-        height: 581px;
+        height: fit-content;
+        
         width: 540px;
         max-width: 100%;
         margin: 0 auto;
@@ -273,6 +275,8 @@
         border-radius: 10px;
         padding-left: 40px;
         padding-right: auto;
+        padding-top: 30px;
+        padding-bottom: 30px;
         left: 50%;
         transform: translateX(-50%);
     }
@@ -306,25 +310,35 @@
     }
     &__modal-brief-summary{
        display: flex;
-       width: 90%;
+       flex-direction: column;
+       max-width: 100%;
        border-radius: 10px;
-      
+       @media only screen and (min-width: 580px) {
+        max-width: 90%;
+        flex-direction: row;
+       } 
     }
     &__modal-items{
        display: flex;
        flex-direction: column;
        flex-basis: 1;
-       width: 100%; 
+       width: 90%; 
        font-size: 15px;
+       max-width: 100%;
         background-color: var(--medium-light-gray);
-        border-bottom-left-radius: 10px;
+        border-top-right-radius: 10px;
         border-top-left-radius: 10px;
-        padding: 30px 0 30px 0;
+        padding: 30px 20px 30px 0;
+        @media only screen and (min-width: 580px) {
+            border-bottom-left-radius: 10px;
+            border-top-left-radius: 10px;
+            padding: 30px 20px 30px 0;
+        } 
     }
    
     &__modal-items-top-info-amount{
        width: fit-content;
-       margin-left: 30%;
+       margin-left: 50px;
        align-self: flex-start;
     }
     &__modal-items-top-others{
@@ -333,6 +347,7 @@
         position: relative;
         padding-top: 10px;
         margin-top: 5px;
+        max-width: 100%;
         &::after{
             content: "";
             border-top: 1px solid var(--very-dark-gray);
@@ -348,20 +363,29 @@
        color: white;
        background-color: var(--black-color);
        flex-basis: 1;
-       width: 100%;
-       border-bottom-right-radius: 10px;
-        border-top-right-radius: 10px;
+       max-width: 90%;
+       border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
         padding: 30px 0 30px 0;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+
+        @media only screen and (min-width: 580px) {
+            border-bottom-right-radius: 10px;
+            border-top-right-radius: 10px;
+            border-bottom-left-radius: 0;
+            
+            padding: 30px 20px 30px 0;
+            max-width: 100%;
+        } 
     }
 
     &__modal-finalize{
         width: 444px;
-        max-width: 100%;
-        margin: 50px 0 0 0;
+        max-width: 50%;
+        margin: 50px auto 0 auto;
         font-size: 16px;
         height: 48px;
         color: var(--white-color);
@@ -371,6 +395,9 @@
         &:active{
             background: var(--light-beige);
         }
+        @media only screen and (min-width: 780px) {
+            max-width: 100%;
+        } 
     }
     &__modal-items-top{
        display: flex;
@@ -393,9 +420,16 @@
         width: 80%;
         margin: 8px auto 0 auto;
     }
+    
         
     
 }
 .checkout__payment-choices-elem:focus-within {
     border: 3px solid var(--dark-beige);
+}
+.red-border{
+    border: 3px solid red;
+}
+.red-title{
+    color: red;
 }
